@@ -1,5 +1,5 @@
 {
-    "name": "ethanclevenger/gf-dynamic-population-from-cookies",
+    "name": "ethanclevenger91/gf-dynamic-population-from-cookies",
     "description": "Adds cache-friendly support for dynamically populating Gravity Form fields from cookies.",
     "type": "wordpress-plugin",
     "authors": [
