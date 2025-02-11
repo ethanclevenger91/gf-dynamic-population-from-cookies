@@ -32,13 +32,14 @@ add_action('gform_register_init_scripts', function ($form) {
     const fields = [].slice.call(document.querySelectorAll('[data-prefill]'));
     fields.forEach(function(field) {
         const value = getCookie(field.dataset.prefill);
-        if (value === '') return;
+        if (value === null || value === '') return;
 
         const fieldType = (field.tagName === 'INPUT') ? field.type : field.tagName.toLowerCase();
         switch (fieldType) {
             case 'checkbox':
             case 'radio':
-                field.checked = (value.split(',').indexOf(field.value) !== -1);
+                // Radio/checkbox field support to come.
+                // field.checked = (value.split(',').indexOf(field.value) !== -1);
                 break;
             case 'select':
 				const selected = value.split(',');
